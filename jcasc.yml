@@ -18,6 +18,8 @@ unclassified:
     - name: "GitHub - CloudBees Days"
       credentialsId: "cbdays-github-token-secret"
       manageHooks: true
+  globalDefaultFlowDurabilityLevel:
+    durabilityHint: SURVIVABLE_NONATOMIC
   globallibraries:
     libraries:
     - defaultVersion: "master"
