@@ -1,3 +1,30 @@
+credentials:
+  system:
+    domainCredentials:
+      - domain:
+          name: "github.com"
+          description: "GitHub"
+        credentials:
+          - string:
+              scope: GLOBAL
+              id: cbdays-github-token-secret
+              description: "GitHub PAT for beedemo-ops from JCasC - secret text"
+              secret: ${github-ops-token}
+          - usernamePassword:
+              scope: GLOBAL
+              id: cbdays-github-token
+              description: "GitHub PAT for beedemo-ops from JCasC"
+              username: beedemo-ops
+              password: ${github-ops-token}
+      - domain:
+          name: "gitlab.com"
+          description: "Credentials for GitLab examples"
+        credentials:
+          - gitlabPersonalAccessToken:
+              description: "GitLab PAT for beedemo-dev"
+              id: "gitlab-beedemo-dev"
+              scope: GLOBAL
+              token: ${gitlab-beedemo-dev-pat}
 jenkins:
   agentProtocols:
   - "Diagnostic-Ping"
@@ -24,7 +51,6 @@ unclassified:
       manageWebHooks: true
       name: "gitlab-beedemo-dev"
       serverUrl: "https://gitlab.com"
-      manageHooks: true
   globallibraries:
     libraries:
     - defaultVersion: "master"
@@ -78,30 +104,3 @@ kube:
             resourceLimitMemory: "1Gi"
             resourceRequestCpu: "500m"
             resourceRequestMemory: "512Mi"
-credentials:
-  system:
-    domainCredentials:
-      - domain:
-          name: "github.com"
-          description: "GitHub"
-        credentials:
-          - string:
-              scope: GLOBAL
-              id: cbdays-github-token-secret
-              description: "GitHub PAT for beedemo-ops from JCasC - secret text"
-              secret: ${github-ops-token}
-          - usernamePassword:
-              scope: GLOBAL
-              id: cbdays-github-token
-              description: "GitHub PAT for beedemo-ops from JCasC"
-              username: beedemo-ops
-              password: ${github-ops-token}
-      - domain:
-          name: "gitlab.com"
-          description: "Credentials for GitLab examples"
-        credentials:
-          - gitlabPersonalAccessToken:
-              description: "GitLab PAT for beedemo-dev"
-              id: "gitlab-beedemo-dev"
-              scope: GLOBAL
-              token: ${gitlab-beedemo-dev-pat}
