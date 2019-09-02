@@ -81,7 +81,7 @@ kube:
 credentials:
   system:
     domainCredentials:
-      - domain :
+      - domain:
           name: "github.com"
           description: "GitHub"
         credentials:
@@ -96,9 +96,12 @@ credentials:
               description: "GitHub PAT for beedemo-ops from JCasC"
               username: beedemo-ops
               password: ${github-ops-token}
-      - credentials:
-        - gitlabPersonalAccessToken:
-            description: "GitLab PAT for beedemo-dev"
-            id: "gitlab-beedemo-dev"
-            scope: GLOBAL
-            token: ${gitlab-beedemo-dev-pat}
+      - domain:
+          name: "gitlab.com"
+          description: "Credentials for GitLab examples"
+        credentials:
+          - gitlabPersonalAccessToken:
+              description: "GitLab PAT for beedemo-dev"
+              id: "gitlab-beedemo-dev"
+              scope: GLOBAL
+              token: ${gitlab-beedemo-dev-pat}
