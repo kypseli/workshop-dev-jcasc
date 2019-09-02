@@ -31,9 +31,6 @@ unclassified:
               credentialsId: "cbdays-github-token"
               repoOwner: "cloudbees-days"
               repository: "pipeline-library"
-notificationConfiguration:
-  enabled: true
-  router: "operationsCenter"
 kube:
   podTemplatesConfiguration:
     templates:
