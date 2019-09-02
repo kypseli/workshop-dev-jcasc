@@ -17,6 +17,13 @@ unclassified:
     configs:
     - name: "GitHub - CloudBees Days"
       credentialsId: "cbdays-github-token-secret"
+  gitLabServers:
+    servers:
+    - credentialsId: "gitlab-beedemo-dev"
+      manageSystemHooks: true
+      manageWebHooks: true
+      name: "gitlab-beedemo-dev"
+      serverUrl: "https://gitlab.com"
       manageHooks: true
   globallibraries:
     libraries:
@@ -89,3 +96,9 @@ credentials:
               description: "GitHub PAT for beedemo-ops from JCasC"
               username: beedemo-ops
               password: ${github-ops-token}
+      - credentials:
+        - gitlabPersonalAccessToken:
+            description: "GitLab PAT for beedemo-dev"
+            id: "gitlab-beedemo-dev"
+            scope: GLOBAL
+            token: ${gitlab-beedemo-dev-pat}
