@@ -15,25 +15,7 @@ jenkins:
       namespace: "cje"
       readTimeout: 15
       serverCertificate: |-
-        -----BEGIN CERTIFICATE-----
-        MIIDCzCCAfOgAwIBAgIQD7MV9bpep6XbIwicyyyOZjANBgkqhkiG9w0BAQsFADAv
-        MS0wKwYDVQQDEyQ0NGQyNzQ0YS05NGVmLTQzNzktYjFhYS03NDQyYzk5MTJiYzkw
-        HhcNMTkwNTEyMDg0ODExWhcNMjQwNTEwMDk0ODExWjAvMS0wKwYDVQQDEyQ0NGQy
-        NzQ0YS05NGVmLTQzNzktYjFhYS03NDQyYzk5MTJiYzkwggEiMA0GCSqGSIb3DQEB
-        AQUAA4IBDwAwggEKAoIBAQCwMU+TWtAH8/4aRpa/OPA8XpDRA653Fyjy7U6gHvpK
-        bt6mp4mHYAgfR8bU8IUa3clOOV20WO1gDLi4x5/tWG6adzhaLpfcqOlux081Khzj
-        5nloyAgFRKUbH7HtXPjD20FJQsxFXahQjI0GSgFVQOz7yyKw6uAx4EL82YEOPLVC
-        8YHN1sGvAuVemIy6C8auD8KActLb1WupLQ6rFX27lok+PFCnYiOuiSqnPQan0ZPZ
-        7lNUPfoq+A1wgCkGAm5vWJknEjRxDgFFE+je8Yb5/zqH8eci262HbHD3Mp00U6PF
-        1Eh+PUd1AC9F01uPRxvNgFvN+DM52Pmr4aOgvH5mful9AgMBAAGjIzAhMA4GA1Ud
-        DwEB/wQEAwICBDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAL
-        C8q5UM4SVwN0t3NpPwrwhsU3nD0bOF1Ty3kdQOyGq/o6xJrkn3Q3ARqiou/ipnO2
-        l04UDfOO5tw+/zQFtijWmuxnyWobhPVR65wGzaZLAB/Qxne678UALxYHJa4wnclV
-        Czm8PJGollRsYirMFiAT+jqG1nn2ffi9xCmJ/ZQnxLhOXE1Ew3GCOW3m+wV5SL4/
-        AezkIYWdKc4b4zksmZLotxSN6PskZDwgtVtrnI3Mbgc0qLZHuFsc8Ovzrou8J7MT
-        F1h7/vbAPokDE1+q0qU70b4NavAGIRBvtwuHjzk0KJwZSpBX3o0ANZuuHM1rjf6t
-        mLxOkry0wkWGaSD7szN6
-        -----END CERTIFICATE-----
+        ${core-workshop-cert}
       templates:
       - containers:
         - args: "/var/jenkins_config/jenkins-agent"
