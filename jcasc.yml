@@ -33,6 +33,7 @@ jenkins:
         name: "default-jnlp"
         nodeSelector: "workload=general"
         nodeUsageMode: "NORMAL"
+        serviceAccount: "jenkins"
         volumes:
         - configMapVolume:
             configMapName: "jenkins-agent"
